@@ -1,5 +1,5 @@
-#github 和 本地 git 传输
-##在本地生成git
+# github 和 本地 git 传输
+## 在本地生成git
 $ git init
 将当前路径变为git仓库
 
@@ -9,7 +9,7 @@ $ git add filename
 $ git commit -m "修改描述"
 提交所有修改，不添加-m会弹出一个vim让你填写修改描述
 
-##在本地同步github
+## 在本地同步github
 $ git remote add localname http://github.com/nzyqq123/filename
 localname 本地路径		filename github的路径文件		nzyqq123 github的用户名
 
@@ -22,7 +22,7 @@ $ git push -u first main
 $ git pull origin master
 将github的文件拉回本地,origin本地主分支，master github的分支
 
-##分支相关
+## 分支相关
 $ git branch
 查看分支
 
