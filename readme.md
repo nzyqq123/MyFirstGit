@@ -66,9 +66,12 @@ remotename 远程在本地的映射名 filename github路径   nzyqq123 github�
 `$ ssh-keygen -o -t rsa -b 4096 -C "email@example.com"`
 生成一个rsa 的ssh key
 
-`cat ~/.ssh/id_ed25519.pub | clip`
+`$ cat ~/.ssh/id_ed25519.pub | clip`
 上述生成的key将保存在C盘用户名下的.ssh文件夹中，上述代码根据生成的文件名做相应更改
 这时会在剪切板生成一串ssh key 代码，将其粘贴至用户头像/setting/ssh and gpg keys的key框内，点击确认
 
-`ssh -T git@github.com`
+`$ ssh -T git@github.com`
 测试连接，需要确认，连接成功后完成ssh key的映射
+
+`$ git clone git@github.com:youname/projectname.git`
+通过ssh key克隆到本地
