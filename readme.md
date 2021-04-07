@@ -57,3 +57,18 @@ remotename 远程在本地的映射名 filename github路径   nzyqq123 github�
 
 `$ git branch --set-upstream-to master origin/master`
 将本地的分支和远程分支关联   master本地分支，origin/master远程分支
+
+## 通过SSH克隆
+
+`$ ssh -keygen -t ed25519 -C "email@example.com"`
+生成一个ed25519 的ssh key	其中需要enter确定保存的地址和选择使用密码。直接全部enter跳过
+
+`$ ssh-keygen -o -t rsa -b 4096 -C "email@example.com"`
+生成一个rsa 的ssh key
+
+`cat ~/.ssh/id_ed25519.pub | clip`
+上述生成的key将保存在C盘用户名下的.ssh文件夹中，上述代码根据生成的文件名做相应更改
+这时会在剪切板生成一串ssh key 代码，将其粘贴至用户头像/setting/ssh and gpg keys的key框内，点击确认
+
+`ssh -T git@github.com`
+测试连接，需要确认，连接成功后完成ssh key的映射
